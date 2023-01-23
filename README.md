@@ -28,7 +28,7 @@
 ### 3.1 Status Peminjaman dan Risiko Kredit
 Terdapat 9 status pinjaman pada data mentah sebagaimana ditampilkan pada grafik berikut.
 
-![image](https://user-images.githubusercontent.com/115754250/213966662-a1171bd0-59ff-4bb5-a5ca-811ecd92f8bf.png)
+![image](https://user-images.githubusercontent.com/115754250/213982966-58bf2087-b1dc-4118-91f9-b6ba53a34724.png)
 
 Namun untuk machine learning yang akan dibuat, status pinjaman ini akan diubah menjadi risiko kredit dengan dua tingkat risiko, yaitu:
 * **Risiko rendah**, yang direpresentasikan dengan angka **0**. Risiko rendah diambil dari data dengan status pinjaman *Fully Paid*.
@@ -36,18 +36,20 @@ Namun untuk machine learning yang akan dibuat, status pinjaman ini akan diubah m
 
 Data dengan status pinjaman *Current* tidak akan digunakan karena pinjaman tersebut masih berjalan dan belum diketahui risikonya.
 
+![image](https://user-images.githubusercontent.com/115754250/213983082-e6511214-c1ba-47ef-977a-652c7f4b3a39.png)
+
 ### 3.2 Nilai Null Pada Tiap Atribut
-![image](https://user-images.githubusercontent.com/115754250/213963216-1786f1bc-bd14-4561-957b-c5dbaa5755eb.png)
+![image](https://user-images.githubusercontent.com/115754250/213983166-4a707910-453d-478d-8252-a8c6b2800ec0.png)
 
 Atribut dengan jumlah nilai null lebih dari 1/4 total record pada data mentah akan dihapus. Berdasarkan grafik di atas, nama atribut yang ditulis dengan warna merah dan bold akan dihapus.
 
 ### 3.3 Nilai Unik Pada Tiap Atribut
-![image](https://user-images.githubusercontent.com/115754250/213963318-0b2d962e-82d1-4cce-9158-6e01ea8b1ee1.png)
+![image](https://user-images.githubusercontent.com/115754250/213983240-6276285f-5a74-4c6b-9029-7541446ac02c.png)
 
 Atribut yang terlalu unik, atau dengan kata lain atribut yang jumlah nilai uniknya sama dengan total record pada data mentah akan dihapus. Berdasarkan grafik di atas, nama atribut yang ditulis dengan warna merah dan bold akan dihapus.
 
 ### 3.4 Nilai Unik Pada Atribut Dengan Data Kategorik
-![image](https://user-images.githubusercontent.com/115754250/213963750-b0a9d20b-a34b-4ff9-9d9c-852ef9d11ebe.png)
+![image](https://user-images.githubusercontent.com/115754250/213983299-c753324d-d4ec-4ed7-9d15-c4ffece72f76.png)
 
 Atribut dengan nilai katogorik akan sulit diolah jika memiliki nilai unik yang terlalu banyak. Oleh karena itu, pada proyek ini atribut dengan data kategorik yang memiliki nilai unik lebih dari 100 akan dihapus. Berdasarkan grafik di atas, nama atribut yang ditulis dengan warna merah dan bold akan dihapus.
 
@@ -90,7 +92,7 @@ Konsepnya adalah dengan cara menyajikan algoritma dengan pernyataan bersyarat, y
   - max_depth: *2*, *3*, dan *4*
   
 ### 4.3 Hasil
-![image](https://user-images.githubusercontent.com/115754250/213964850-0e450386-2623-4773-a9b5-1f60475b721f.png)
+![image](https://user-images.githubusercontent.com/115754250/213983414-6bff3bb0-f897-49da-a5c0-70dd72beb607.png)
 
 Diperoleh akurasi:
 * **97,6%** pada data latih, dan
@@ -98,14 +100,11 @@ Diperoleh akurasi:
 
 Model dapat memprediksi risiko kredit nasabah secara tepat degan kemungkinan lebih dari 95%.
 
-**Precision**
-* **95%** kemungkinan model berhasil memprediksi dengan benar pinjaman dengan **risiko tinggi** sebagai **risiko tinggi**.
+**Precision**: **95%** kemungkinan model berhasil memprediksi dengan benar pinjaman dengan **risiko tinggi** sebagai **risiko tinggi**.
 
-**Recall**
-* **92%** kasus pinjaman dengan **risiko tinggi** dari total pinjaman dengan **risiko tinggi** yang sebenarnya dikenali oleh model.
+**Recall**: **92%** kasus pinjaman dengan **risiko tinggi** dari total pinjaman dengan **risiko tinggi** yang sebenarnya dikenali oleh model.
 
-**F1-Score**
-* **94%** keseimbangan antara precision dan recall yang menunjukan kinerja model sangat baik dengan nilai di atas 90%.
+**F1-Score**: **94%** keseimbangan antara precision dan recall yang menunjukan kinerja model sangat baik dengan nilai di atas 90%.
 
 ## 5. KESIMPULAN
 * Model machine learning yang dibuat untuk prediksi risiko kredit bekerja dengan sangat baik. Hasil evaluasi menunjukkan skor precision, recall, dan f1 yang tinggi, yang menandakan bahwa model kami mampu mengenali pinjaman dengan risiko tinggi dengan baik, serta memiliki tingkat akurasi yang tinggi dalam prediksi risiko pinjaman.
@@ -114,6 +113,7 @@ Model dapat memprediksi risiko kredit nasabah secara tepat degan kemungkinan leb
 
 ## 6. REFERENSI
 [1] https://www.ocbcnisp.com/id/article/2022/02/24/risiko-kredit-adalah
+
 [2] https://dqlab.id/pahami-metode-decision-tree-sebagai-algoritma-data-science
 
 # THANK YOU
@@ -121,20 +121,17 @@ Model dapat memprediksi risiko kredit nasabah secara tepat degan kemungkinan leb
   <thead>
     <tr>
       <th>Sosial Media</th>
-      <th>Pemilik</th>
-      <th>Logo</th>
+      <th>Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>LinkedIn</th>
-      <td>Muhafidz Ahmad Halim</th>
       <td><a href="https://www.linkedin.com/in/muhafidz-ahmad-halim/"><img src="https://user-images.githubusercontent.com/115754250/213965797-c07b0ad3-c5e7-4c9e-9f09-5076141f57f4.png" width="30" height="30"/></a></td>
+      <td><a href="https://www.linkedin.com/in/muhafidz-ahmad-halim/">Muhafidz Ahmad Halim</a></th>
     </tr>
     <tr>
-      <td>Instagram</td>
-      <td>Muhafidz</td>
-      <td><a href="https://www.instagram.com/anumuhafidz/"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-messaging-ui-color-shapes-2-13-512.png" width="30" height="30"></a></td>
+      <td><a href="https://www.instagram.com/anumuhafidz/"><img src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-png-instagram-logo-camel-productions-website-25.png" width="30" height="30"></a></td>
+      <td><a href="https://www.instagram.com/anumuhafidz/">@anumuhafidz</a></td>
     </tr>
   </tbody>
 </table>
